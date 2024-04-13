@@ -15,8 +15,8 @@
             .style("color", "red")
             .text("Hello, I am learning D3JS!");*/
 
-        // Drawing shape
-        var canvas = d3.select("body")
+        // Drawing shapes
+        /*var canvas = d3.select("body")
                         .append("svg")
                         .attr("width", 500)
                         .attr("height", 500);
@@ -37,7 +37,23 @@
                         .attr("x2", 400)
                         .attr("y2", 400)
                         .attr("stroke", "green")
-                        .attr("stroke-width", 10);
+                        .attr("stroke-width", 10);*/
+
+        //Data from Arrays
+        var dataArray = [20, 40, 50];
+
+        var canvas = d3.select("body")
+                        .append("svg")
+                        .attr("width", 500)
+                        .attr("height", 500);
+
+        var bars = canvas.selectAll("rect")
+                        .data(dataArray)
+                        .enter()
+                            .append("rect")
+                            .attr("width", function(d) { return d * 10 })
+                            .attr("height", 50)
+                            .attr("y", function(d, i) { return i * 100 });
 
 
     </script>
