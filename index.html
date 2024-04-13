@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3JS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js" integrity="sha512-vc58qvvBdrDR4etbxMdlTt4GBQk1qjvyORR2nrsPsFPyrs+/u5c3+1Ct6upOgdZoIl7eq6k3a1UPDSNAQi/32A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <script>
+        /* 
+        Just testing
+        d3.select("body")
+            .append("p")
+            .style("color", "red")
+            .text("Hello, I am learning D3JS!");*/
+
+        // Drawing shape
+        var canvas = d3.select("body")
+                        .append("svg")
+                        .attr("width", 500)
+                        .attr("height", 500);
+
+        var circle = canvas.append("circle")
+                        .attr("cx", 250)
+                        .attr("cy", 250)
+                        .attr("r", 50)
+                        .attr("fill", "red");
+
+        var rect = canvas.append("rect")
+                        .attr("width", 100)
+                        .attr("height", 50);
+
+        var line = canvas.append("line")
+                        .attr("x1", 0)
+                        .attr("y1", 100)
+                        .attr("x2", 400)
+                        .attr("y2", 400)
+                        .attr("stroke", "green")
+                        .attr("stroke-width", 10);
+
+
+    </script>
+
+</body>
+</html>
